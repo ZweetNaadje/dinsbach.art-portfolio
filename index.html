@@ -1,121 +1,162 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | WebsitePortfolio</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1280 height=720></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WebsitePortfolio</div>
-      </div>
+<html>
+    <head>
+        <Title>Dinsbach.art</Title>
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
+        <style>
+            body {
+                color: white;
+                font-family: "Open Sans", sans-serif !important;
+            }
+            
+            h1 {
+                color: white !important;
+            }
+            
+            p {
+                color: white;   
+            }
+            
+            span {
+                color: white !important;
+            }
+            
+            .sub {
+                color: #63646D !important;
+            }
+            
+            header {
+                background-color: #171822;
+            }
+
+            .btn-sample {
+                color: #FFFFFF;
+                background-color: #FA55FF;
+                border-color: #FA55FF;
+            }
+
+            .btn-sample:hover,
+            .btn-sample:focus,
+            .btn-sample:active,
+            .btn-sample.active,
+            .open .dropdown-toggle.btn-sample {
+                color: #FFFFFF;
+                background-color: #FA55FF;
+                border-color: #FA55FF;
+            }
+
+            .btn-sample:active,
+            .btn-sample.active,
+            .open .dropdown-toggle.btn-sample {
+                background-image: none;
+            }
+
+            .btn-sample.disabled,
+            .btn-sample[disabled],
+            fieldset[disabled] .btn-sample,
+            .btn-sample.disabled:hover,
+            .btn-sample[disabled]:hover,
+            fieldset[disabled] .btn-sample:hover,
+            .btn-sample.disabled:focus,
+            .btn-sample[disabled]:focus,
+            fieldset[disabled] .btn-sample:focus,
+            .btn-sample.disabled:active,
+            .btn-sample[disabled]:active,
+            fieldset[disabled] .btn-sample:active,
+            .btn-sample.disabled.active,
+            .btn-sample[disabled].active,
+            fieldset[disabled] .btn-sample.active {
+                background-color: #FA55FF;
+                border-color: #FA55FF;
+            }
+
+            .btn-sample .badge {
+                color: #FA55FF;
+                background-color: #FFFFFF;
+            }
+            
+        </style>
+        
+    </head>
+    <body style="background-color: #0D0E19">
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                <span class="fs-4">Dinsbach.art</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><button class="btn btn-light">Art made with ♥</button></li>
+            </ul>
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        </header>
     </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Welkom bij mijn portfolio</h1>
+                <p class="lead sub">Placeholder</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border border-dark shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1">HKU Utrecht toelatingsopdracht</h1>
+                <p class="lead sub">lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                   <a href="player.html" class="btn btn-sample btn-lg px-4 me-md-2 fw-bold" role="button" aria-disabled="true">Play Interactive Demo</a>
+                </div>
+            </div>
+            <div class="col-lg-4 shadow-lg">
+                <p></p>
+                <div class="ratio ratio-16x9"> 
+                    <iframe src="https://www.youtube.com/embed/Fu9ejDpJN6o"></iframe>
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </div>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/PortfolioBuild.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/PortfolioBuild.data",
-        frameworkUrl: buildUrl + "/PortfolioBuild.framework.js",
-        codeUrl: buildUrl + "/PortfolioBuild.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "WebsitePortfolio",
-        productVersion: "0.1",
-        showBanner: unityShowBanner,
-      };
+    <div class="px-4 pt-5 my-5 text-center border-bottom border-dark">
+        <h1 class="display-4 fw-bold">Crypto Tycoon</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead sub mb-4"> lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon lorem epsilon</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="https://store.steampowered.com/app/1810330/Crypto_Tycoon/" class="btn btn-sample btn-lg px-4 me-md-2 fw-bold" role="button" aria-disabled="true">Visit Steam Store</a>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5">
+                <img src="ss_dd53e5aa90f73e12dcb45b6ac26afe48934311eb.1920x1080.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+            </div>
+        </div>
+    </div>
 
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0">&copy; 2022 Dinsbach.art</span>
+            </div>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a style="color: #FA55FF" href="https://www.youtube.com/channel/UCkNHVdNVd1NPEx2N9M5ZcuQ/featured"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                </svg></a></li>
+                <li class="ms-3"><a style="color: #FA55FF" href="https://github.com/ZweetNaadje/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg></a></li>
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+                
+            </ul>
+        </footer>
+    </div>
+    </body>
 </html>
